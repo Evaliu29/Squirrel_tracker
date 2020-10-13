@@ -1,0 +1,85 @@
+                                                                                                                  <html>
+    <head>
+        <style>
+        .header {
+            padding: 0px;
+            text-align: center;
+            background: #D4812F;
+            color: white;
+            font-size: 30px;
+        }
+
+        h2 { color: #FFFFFF; font-family: 'Helvetica Neue', sans-serif; font-size: 100px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: center; }
+
+
+        h3 { color: #FFFFFF; font-family: 'Open Sans', sans-serif; font-size: 40px; font-weight: 350; line-height: 32px; margin: 0 50px 72px; text-align: center; }
+
+        .button {
+            background-color: #D4812F;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 25px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        #squirrels {
+            font_family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%
+        }
+
+        #squirrels td, #squirrels th {
+            border: 1px solid #ddd;
+            padding:8px;
+        }
+
+        #squirrels tr:nth-child(even){background-color: #E3E3DE;}
+	#squirrels tr:nth-child(odd){background-color: #E3E3DE;}
+
+        #squirrels tr:hover {background-color: #D2AF95;}
+
+        #squirrels th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #5E452D;
+            color: white;
+        }
+        </style>
+    </head>
+    <body>
+        <header class='header'>
+		<h2><img src='https://planbphoto.com/wp-content/uploads/Grey-squirrel-turned-away.jpg' height=750px width = 1550px>Squirrel Tracker</h2>
+            <h3>This is a full list of squirrels</h3>
+        </header>
+
+
+        <main>
+
+        <p><a href="add/", class="button">Add another squirrel</a></p>
+
+        <table id='squirrels'>
+            <tr>
+                <th>Unique_Squirrel_ID</th>
+                <th>Date</th>
+                
+            </tr>
+            {% for squ in squirrels %}
+            <tr>
+                <td><a href="{{squ.Unique_Squirrel_ID}}">{{squ.Unique_Squirrel_ID}}</a></td>
+                <td>{{squ.Date}}</td>
+               
+            </tr>
+            {% endfor %}
+        </table>
+    </main>
+
+
+
+    </body>
+</html> 
