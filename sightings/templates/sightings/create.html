@@ -1,0 +1,10 @@
+<html>
+        <body>
+                <form method="post">{% csrf_token %}
+                        {{ fullform.as_p }}
+                        <br>
+                        <input type="submit" name="Create">
+                </form>
+        </body>
+</html>
+~          
