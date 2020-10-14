@@ -1,6 +1,84 @@
 <html>
 
-
-
-
+<head>
+        <style>
+        .header {
+            padding: 0px;
+            text-align: center;
+            background: #D4812F;
+            color: white;
+            font-size: 30px;
+        }
+        h2 { color: #FFFFFF; font-family: 'Helvetica Neue', sans-serif; font-size: 100px; font-weight: bold; letter-spacing: -1px; line-height: 1; text-align: cen
+ter; }
+        h3 { color: #FFFFFF; font-family: 'Open Sans', sans-serif; font-size: 40px; font-weight: 350; line-height: 32px; margin: 0 50px 72px; text-align: center; 
+}
+        .button {
+            background-color: #D4812F;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 25px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        #squirrels {
+            font_family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%
+        }
+        #squirrels td, #squirrels th {
+            border: 1px solid #ddd;
+            padding:8px;
+        }
+        #squirrels tr:nth-child(even){background-color: #E3E3DE;}
+        #squirrels tr:nth-child(odd){background-color: #E3E3DE;}
+        #squirrels tr:hover {background-color: #D2AF95;}
+	
+	 #squirrels th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #5E452D;
+            color: white;
+        }
+        </style>
+    </head>
+    <body>
+        <header class='header'>
+                <h2><img src='https://planbphoto.com/wp-content/uploads/Grey-squirrel-turned-away.jpg' height=750px width = 1550px>Squirrel Tracker</h2>
+		<h3>Statistics of Squirrels</h3>
+        </header>
+        <main>
+        <table id='squirrels'>
+            <tr>
+                <th>Stats TypeD</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Count of All Squirrels</td>
+                <td>{{Count_Squirrels}}</td>
+            </tr>
+	    <tr>
+                <td>Average of Lattitude</td>
+                <td>{{Avg_Lattitude}}</td>
+            </tr>
+	    <tr>
+                <td>Average of Longitude</td>
+                <td>{{Avg_Longitude}}</td>
+            </tr>
+	    <tr>
+                <td>Ratio of Squirrels (AM vs. PM)</td>
+                <td>{{AMPM_ratio}}</td>
+            </tr>
+	    <tr>
+                <td>Percentage of Squirrels Running</td>
+                <td>{{Running_perct}}</td>
+            </tr>
+        </table>
+    	</main>
+    </body>
 </html>

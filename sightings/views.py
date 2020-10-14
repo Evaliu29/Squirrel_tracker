@@ -49,7 +49,7 @@ def create(request):
     return render(request, 'sightings/create.html', context)
 
 def stats(request):
-    count = Squirrel.object.count()
+    count = Squirrel.objects.count()
     ratio = Squirrel.objects.filter(Shift = 'AM' ).count()/Squirrel.objects.filter(Shift = 'PM' ).count()
     avg_lat  = Squirrel.objects.aggregate(Avg('Latitude'))
     avg_long = Squirrel.objects.aggregate(Avg('Longitude'))
@@ -59,15 +59,13 @@ def stats(request):
 
     context = {
             'Count_Squirrels': count,
-            'Avg_Lattitude': avg_lat,
-            'Avg_Longitude': avg_long
-            'AM/PM ratio': ratio
-            'Adult_Squirrel_Count': adult_no
+            'Avg_Lattitude': avg_lat['Latitude__avg'],
+            'Avg_Longitude': avg_long['Longitude__avg'],
+            'AMPM_ratio': ratio,
+            'Adult_Squirrel_Count': adult_no,
             'Running_perct': run_perct
             }
 
     return render(request, 'sightings/stats.html', context)
-
-
 
 # Create your views here.
