@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from sightings.models import Squirrel
 from django.shortcuts import get_object_or_404
-from .forms import SquirrelForm
+from .forms import SquirrelForm, SquirrelFullForm
 from django.http import JsonResponse
 from django.http import HttpResponse
 from django.shortcuts import redirect
@@ -30,20 +30,20 @@ def update(request,squirrel_id):
             }
     return render(request, 'sightings/update.html', context)
 
-
 def create(request):
-    squirrel = get_object_or_404(Squirrel, Unique_Squirrel_ID=squirrel_id)
+
     if request.method=='POST':
-        form = SquirrelForm(request.POST,instance=squirrel)
-        if form.is_valid():
-            form.save()
+        fullform = SquirrelFullForm(request.POST)
+        if fullform.is_valid():
+            fullform.save()
             return redirect('/sightings/')
         else:
-            return JsonResponse({'error':form.errors},status=400)
-    form = SquirrelForm(instance=squirrel)
+            return JsonResponse({'error':fullform.errors},status=400)
+    fullform = SquirrelFullForm()
+
     context ={
-            'form':form
+            'fullform':fullform
             }
-    return render(request, 'sightings/update.html', context)
+    return render(request, 'sightings/create.html', context)
 
 # Create your views here.

@@ -13,4 +13,7 @@ class SquirrelForm(ModelForm):
             'Date',
             'Age'
                 ]
-
+class SquirrelFullForm(ModelForm):
+    class Meta:
+        model = Squirrel
+        fields = '__all__'

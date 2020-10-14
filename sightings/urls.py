@@ -5,7 +5,7 @@ app_name = 'sightings'
 
 urlpatterns = [
         path('', views.lists, name='lists'),
-        path('<str:squirrel_id>/',views.update,name='update'),
-        path('create/',views.create,name='create')
+        path('create/',views.create,name='create'),
+        path('<str:squirrel_id>/',views.update,name='update')
 
         ]
