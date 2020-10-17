@@ -34,6 +34,35 @@ Link to unique squirrel sighting to edit the squirrel
 Link to the “add” sighting view
 Link to show the stats of the squirrels
 
+### A view to update a particular sighting
+The url is Located at: /sightings/<unique-squirrel-id>
+Methods Supported: GET & POST
+It allows you to update Latitude, Longitude, Unique Squirrel ID, Shift, Date and Age.
+
+### A view to create a new sighting
+Located at: /sightings/add
+Methods Supported: GET & POST
+It allows you to add new sighting with all fields listed in the form.
+
+### A view with general stats about the sightings
+It shows the 
+Located at: /sightings/stats
+Method: GET
+
+### Contributors
+Group Name: Team Q&L
+
+Section: 001
+
+Contributors: Xintong Qiang, Minyue Liu
+
+UNIs: [xq2212, ml4368]
+
+
+
+
+
+
 
 
 
