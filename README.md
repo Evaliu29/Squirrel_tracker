@@ -4,7 +4,10 @@
 Eccentric billionaire Joffrey Hosencratz would like to start keeping track of all the known squirrels and plans to start with Central Park in order to avoid running in to squirrels. Therefore, this app is used to track and maintain relevant information about squirrels in Central Park, where you can import the 2018 Central Park Squirrel Census data and allow to add, update, and view squirrel data.   
  
 ### Dataset
-The Squirrel Census dataset contains squirrel data for each of the 3,023 sightings, including location coordinates, age, primary and secondary fur color, elevation, activities, communications, and interactions between squirrels and with humans.  
+The Squirrel Census dataset contains squirrel data for each of the 3,023 sightings, including location coordinates, age, primary and secondary fur color, elevation, activities, communications, and interactions between squirrels and with humans. 
+
+### Implementation
+The application is based on Django.
  
 ### Import and export data
 Management commands:  
