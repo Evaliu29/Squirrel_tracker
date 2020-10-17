@@ -28,11 +28,11 @@ This is the page that lists all squirrel sightings with links to view and edit e
 Located at: /sightings  
 Methods Supported: GET  
 Fields to show:  
-Unique Squirrel ID  
-Date  
-Link to unique squirrel sighting to edit the squirrel  
-Link to the “add” sighting view  
-Link to show the stats of the squirrels  
+- Unique Squirrel ID  
+- Date  
+- Link to unique squirrel sighting to edit the squirrel  
+- Link to the “add” sighting view  
+- Link to show the stats of the squirrels  
 
 ### A view to update a particular sighting
 The url is Located at: /sightings/<unique-squirrel-id>  
@@ -49,11 +49,11 @@ It shows the
 Located at: /sightings/stats
 Method: GET
 Stats to show:  
-Count of all squirrels  
-Average of lattitude  
-Average of longitude  
-Ratio of squirrels (AM vs PM)  
-Percentage % of squirrels (Running)  
+- Count of all squirrels  
+- Average of lattitude  
+- Average of longitude  
+- Ratio of squirrels (AM vs PM)  
+- Percentage % of squirrels (Running)  
 
 ### Contributors
 Group Name: Team Q&L  
