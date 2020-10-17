@@ -2,6 +2,11 @@ from django.db import models
 from django.utils.translation import gettext as _
 # Create your models here.
 class Squirrel(models.Model):
+    AGE_CHOICES = (
+    ("Adult", "Adult"),
+    ("Juvenile","Juvenile"),
+    ("?","Unknown")
+    )
     Latitude = models.FloatField(
             help_text=_('Latitude'),
             null = False,
@@ -38,6 +43,7 @@ class Squirrel(models.Model):
     Age = models.CharField(
              max_length = 255,
              help_text=_('Age'),
+             choices = AGE_CHOICES,
              null = True,
              blank = True
              )
