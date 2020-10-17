@@ -18,12 +18,12 @@
             background-color: #D4812F;
             border: none;
             color: white;
-            padding: 15px 32px;
+            padding: 10px 20px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 25px;
-            margin: 4px 2px;
+            font-size: 18px;
+            margin: 2px 1px;
             cursor: pointer;
         }
 
@@ -55,7 +55,7 @@
     <body>
         <header class='header'>
 		<h2><img src='https://planbphoto.com/wp-content/uploads/Grey-squirrel-turned-away.jpg' height=750px width = 1550px>Squirrel Tracker</h2>
-            <h3>This is a full list of squirrels</h3>
+            <h3>Full list of squirrels</h3>
         </header>
 
 
@@ -68,14 +68,15 @@
             <tr>
                 <th>Unique_Squirrel_ID</th>
                 <th>Date</th>
+		<th></th>
                 
             </tr>
             {% for squ in squirrels %}
             <tr>
-                <td><a href="{{squ.Unique_Squirrel_ID}}">{{squ.Unique_Squirrel_ID}}</a></td>
+                <td>{{squ.Unique_Squirrel_ID}}</a></td>
                 <td>{{squ.Date}}</td>
-               
-            </tr>
+		<td><button type="button"><a href="{{squ.Unique_Squirrel_ID}}">edit</button></td>
+	    </tr>
             {% endfor %}
         </table>
     </main>
