@@ -16,6 +16,27 @@ https://data.cityofnewyork.us/api/views/vfnx-vebw/rows.csv
 Export: A command that can be used to export the data in CSV format. The file path should be specified at the command line after the name of the management command. 
 $ python manage.py export_squirrel_data /path/to/file.csv.
 
+### Squirrel Map
+This is a view that shows a map that displays the location of the squirrel sightings on an OpenStreets map.
+Located at: /map
+Methods Supported: GET
+Uses the https://leafletjs.com/ library for plotting
+Please note: Your browser will start to freeze if you plot more than 100 points at once. The app will only show the first 100 squirrels in the listing.
+
+### Squirrel Sightings List
+This is the page that lists all squirrel sightings with links to view and edit each sighting as well as the link to view stats of squirrels and the link to add squirrels.
+Located at: /sightings
+Methods Supported: GET
+Fields to show:
+Unique Squirrel ID
+Date
+Link to unique squirrel sighting to edit the squirrel
+Link to the “add” sighting view
+Link to show the stats of the squirrels
+
+
+
+
 
 
 
